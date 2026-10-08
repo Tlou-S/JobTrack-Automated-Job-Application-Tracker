@@ -1,16 +1,173 @@
-# Project Idea & Problem Statement
+# JobTrack – Automated Job Application Tracker
 
-## Problem Statement
-Students, vendors and residents often face challenges when trying to buy or sell goods within their community. The platforms that exist now are unstructured, lack trust and they do not provide secure payment options. Many buyers and sellers are left to rely on informal channels such as social media groups or word of mouth, which offer no verification of who they are dealing with and no protection if something goes wrong. This results in unreliable transactions, limited accessibility and an increase in the risk of fraud, ultimately discouraging community members from engaging in trade that could otherwise benefit them.
+## Project Idea & Problem Statement
 
-## Proposed Solution
-The Community Store Project proposes a mobile first marketplace that provides a centralized, secure and user-friendly platform for buying and selling goods and services within the community. Rather than relying on scattered, informal platforms, users are brought together into one trusted space where every account is verified, every payment is processed securely, and every transaction contributes to a visible reputation through a rating system. This combination of verified user accounts, secure payment integration and a rating system works together to enhance trust and usability, making it easier for students, vendors and residents to buy and sell with confidence.
+### Problem Statement
 
-## Business Justification
-The Community Store Project will improve access to affordable goods for students, giving them a reliable place to find what they need without overpaying or dealing with unverified sellers. It will also provide vendors with a targeted marketplace where they can reach a community of buyers who are actively looking to purchase. By reducing fraud through secure authentication and payment, the platform builds the kind of trust that encourages more people to participate. On top of this, the project promotes sustainability through secondhand trading, giving goods a longer lifespan and reducing unnecessary waste within the community.
+Students, graduates and job seekers often struggle to keep track of the jobs they apply for. Applications may be submitted through different websites, email platforms and recruitment portals, making it difficult to remember which companies they applied to, when applications were submitted, what stage each application is currently in, and when interviews are scheduled.
 
-## Expected Benefits
-By bringing students and vendors together on one platform, the project is expected to increase community engagement, creating a more connected local marketplace. Because transactions are backed by verified accounts and secure payments, users can expect safer and more reliable transactions overall. For students specifically, this translates into real cost savings, since affordable and secondhand options become easier to find and trust. Vendors, in turn, gain new business opportunities by reaching a dedicated audience within their own community that they may not have had access to before.
+Managing this information manually through spreadsheets, notes or emails can become time-consuming and unorganized. Important application deadlines, interview dates and follow-ups can easily be missed.
+
+### Proposed Solution
+
+**JobTrack** is an Automated Job Application Tracker designed to provide job seekers with one centralized platform for managing their job search.
+
+The system allows users to record and manage job applications, track application statuses, store company information, manage interviews, organize CVs, add notes, and monitor their job-search activities from a centralized dashboard.
+
+Instead of relying on multiple spreadsheets, emails and separate notes, JobTrack provides users with a structured workspace where they can monitor their applications and understand their overall progress.
+
+### Business Justification
+
+JobTrack can help students, graduates and other job seekers manage the job-search process more efficiently.
+
+By keeping application information in one centralized system, users can reduce the possibility of forgetting applications, missing interviews or losing important company information. The dashboard provides users with a clear overview of their application progress and helps them prioritize opportunities that require attention.
+
+The system can also improve productivity by reducing the amount of manual tracking required during an active job search.
+
+### Expected Benefits
+
+The JobTrack system is expected to provide the following benefits:
+
+* Centralized management of job applications.
+* Easy tracking of application statuses and progress.
+* Improved organization of company and job information.
+* Interview scheduling and tracking.
+* Centralized CV and resume management.
+* Ability to record notes and important application information.
+* Notifications for important job-search activities.
+* Dashboard statistics that provide an overview of application progress.
+* Improved productivity and organization for students and graduates.
+* Better visibility of the user's overall job-search progress.
+
+## Main Features
+
+### User Features
+
+* User registration and login.
+* User profile management.
+* Job application creation, editing and deletion.
+* Application status tracking.
+* Application priority management.
+* Company management.
+* Interview tracking.
+* CV/resume management.
+* Notes for applications.
+* Notifications.
+* Dashboard with application statistics.
+* Search and filtering of applications.
+* Settings and account management.
+
+### Application Statuses
+
+JobTrack supports the following application statuses:
+
+* SAVED
+* APPLIED
+* SCREENING
+* INTERVIEW
+* OFFER
+* ACCEPTED
+* REJECTED
+* WITHDRAWN
+
+### Application Information
+
+Users can store information such as:
+
+* Job Title
+* Company
+* Location
+* Employment Type
+* Salary
+* Application Date
+* Application Status
+* Priority
+* Job URL
+* Contact Person
+* Notes
+
+## Dashboard
+
+The JobTrack dashboard provides users with an overview of their job search, including:
+
+* Total Applications
+* Applications Sent
+* Interviews
+* Offers
+* Rejected Applications
+* Upcoming Interviews
+* Recent Applications
+
+## Project Status
+
+The frontend development is currently in progress.
+
+The current frontend provides the JobTrack user interface, navigation, dashboard and job application tracking functionality.
 
 ## Tech Stack
-React + TypeScript + Vite
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* HTML5
+* CSS3
+
+### Development Tools
+
+* Visual Studio Code
+* Git
+* GitHub
+
+## Project Structure
+
+```text
+JobTrack
+│
+├── public/
+├── src/
+│   ├── Components/
+│   ├── Pages/
+│   ├── assets/
+│   ├── lib/
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+├── package-lock.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+## Project Objectives
+
+The main objectives of JobTrack are to:
+
+* Provide a centralized platform for managing job applications.
+* Help users track their application progress.
+* Improve organization during the job-search process.
+* Provide a clear dashboard for monitoring applications.
+* Help users manage interviews and important job information.
+* Provide a user-friendly and responsive interface.
+
+## Team Project
+
+JobTrack is being developed as a third-year Application Development project.
+
+The project focuses on applying software development principles including:
+
+* Frontend Development
+* User Interface Design
+* Object-Oriented Programming
+* Software Testing
+* Version Control
+* GitHub Collaboration
+* Team Development
+
+## Repository
+
+**JobTrack – Automated Job Application Tracker**
+
+https://github.com/Tlou-S/JobTrack-Automated-Job-Application-Tracker
