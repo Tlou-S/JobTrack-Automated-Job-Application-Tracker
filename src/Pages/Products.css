@@ -1,0 +1,279 @@
+.productsContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #c5ced4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.productsMainSection {
+    /* margin-top: 100px; */
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productsTopsection {
+  position: relative;
+  min-height: 50vh;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: url("/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productsTopsection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(30%) brightness(50%);
+  z-index: 0;
+}
+
+.productsTopsection>* {
+  position: relative;
+  z-index: 1;
+}
+
+.productsTopsectionContainer h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.productsTopsectionContainer p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #f5f5f5;
+}
+
+.filterContainer{
+    width: 100%;
+    min-height: 100px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #1a2a3ac5;
+    border-radius: 20px;
+}
+
+.productSearch-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  padding: 6px 6px 6px 20px;
+  max-width: 600px;
+  width: 50%;
+  height: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.productSearch-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+  color: #1a2a3a;
+  padding: 10px 15px;
+  font-family: inherit;
+}
+
+.productSearch-bar input::placeholder {
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.productSearch-bar button {
+  background: #00102d;
+  color: #ffffff;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: inherit;
+  height: 30px;
+}
+
+.productSearch-bar button:hover {
+  background: #3bf5ff;
+}
+
+.productSearch-bar button:active {
+  transform: scale(0.97);
+}
+
+/* ======================================================================================================================================= */
+/* ── Filter top row (search + filter button) ── */
+.filterTopRow {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filterToggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* background: #00102d; */
+  color: #00102d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+  font-family: inherit;
+  height: 40px;
+}
+
+.filterToggleBtn:hover,
+.filterToggleBtn.active {
+  background: #3bf5ff;
+}
+
+.filterBadge {
+  background: #f5f5f5;
+  color: #00102d;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Filter panel ── */
+.filterPanel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  animation: filterSlide 0.25s ease;
+}
+
+@keyframes filterSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filterGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filterGroup select {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #00102d;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.filterGroup select:focus {
+  border-color: #3bf5ff;
+  box-shadow: 0 0 0 2px rgba(59, 245, 255, 0.2);
+}
+
+.clearFiltersBtn {
+  grid-column: 1 / -1;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #f5f5f5;
+  border: 1px solid #3bf5ff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  font-family: inherit;
+}
+
+.clearFiltersBtn:hover {
+  background: #f5f5f5;
+  color: #00102d;
+}
+
+/* ── Products grid ── */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 30px 20px;
+}
+
+.productsStatus {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 16px;
+  color: #00102d;
+  padding: 40px 0;
+}
+
+.productsError {
+  color: #3bf5ff;
+}
+
+/* Card rendering itself is handled by the shared <ProductCard>
+   component (src/Components/ProductCard.tsx/.css) — this grid only
+   controls layout. */

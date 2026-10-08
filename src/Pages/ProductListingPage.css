@@ -1,0 +1,586 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ProductListingPageContainer{
+ display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #c5ced4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.listing-main-content {
+   /* margin-top: 100px; */
+  min-height: 100vh;
+  width: 100%;
+  /* width: calc(100% - 240px); */
+  padding: 20px;
+}
+
+.listing-icon-btn {
+  cursor: pointer;
+}
+
+.listing-main-content h1{
+  margin: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #00102d;
+}
+
+.listing-main-content p{
+  margin: 10px;
+  font-size: 15px;
+  color: #c0c8d8;
+}
+
+.listing-action-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.listing-btn-draft {
+  background: #1a2a45;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px 24px;
+  cursor: pointer;
+  
+}
+
+.listing-btn-draft1 {
+  background: transparent;
+  border: 2px solid #3bf5ff;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px 24px;
+  cursor: pointer;
+  
+}
+
+.listing-btn-list {
+  background: #3bf5ff;
+  color: #00102d;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.listing-btn-draft:hover {
+  background-color: #3bf5ff;
+  color: #00102d;
+}
+
+.listing-btn-list:hover {
+  background-color: #1a2639;
+}
+
+
+.listing-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+}
+
+.listing-form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listing-card {
+  background: #1a2a45;
+  border-radius: 12px;
+  padding: 20px;
+  color: #e0e6ed;
+}
+
+.listing-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.listing-form-group {
+  margin-bottom: 15px;
+  width: 50%;
+}
+
+.productListingRow{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+}
+
+.listing-form-group label {
+  display: block;
+  font-size: 13px;
+  color: #c0c8d8;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.listing-form-input, .listing-form-select {
+  width: 100%;
+  background: #253653;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.listing-form-input:focus, .listing-form-select:focus {
+  box-shadow: 0 0 0 2px #3bf5ff;
+}
+
+.listing-form-select option {
+  background: #1a2a45;
+}
+
+.listing-radio-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.listing-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.listing-radio-label input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #3bf5ff;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.listing-radio-label input[type="radio"]:checked::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #3bf5ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.listing-price-stock-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Upload Image Card */
+.listing-upload-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  background: #97999c;
+}
+
+/* second box */
+.listing-main-image-preview {
+  flex: 1;
+  background: #101f33;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  min-height: 220px;
+  position: relative;
+}
+
+/* CSS-only Rubik's Cube visualization for the placeholder */
+.listing-rubiks-cube-placeholder {
+  width: 120px;
+  height: 120px;
+  background: #222;
+  position: relative;
+  transform: rotateX(-20deg) rotateY(30deg);
+  transform-style: preserve-3d;
+}
+.listing-rubiks-cube-placeholder .face {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #111;
+  border: 2px solid #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.listing-add-image-btn {
+  width: 50px;
+  height: 50px;
+  background: #253653;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listing-add-image-btn:hover {
+  background: #3bf5ff;
+}
+
+.listing-card-upload-card{
+  background: #1a2a45; /* Dark Navy */
+  border-radius: 12px;
+  padding: 20px;
+  color: #e0e6ed;
+  height: 456px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 1024px) {
+  .listing-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+   /* ===========================================Progress Bar ============================== */
+.listing-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.listing-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.listing-progress-step.clickable {
+  cursor: pointer;
+}
+
+.listing-step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #253653;
+  color: #8899aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid #253653;
+  transition: all 0.25s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.listing-progress-step.active .listing-step-circle {
+  background: #3bf5ff;
+  color: #fff;
+  border-color: #3bf5ff;
+  box-shadow: 0 0 0 4px rgba(59, 245, 255, 0.25);
+  transform: scale(1.08);
+}
+
+.listing-progress-step.completed .listing-step-circle {
+  background: #2ecc71;
+  color: #fff;
+  border-color: #2ecc71;
+}
+
+.listing-progress-step.completed.clickable:hover .listing-step-circle {
+  background: #27ae60;
+  transform: scale(1.08);
+}
+
+.listing-step-label {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #8899aa;
+  text-align: center;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.listing-progress-step.active .listing-step-label {
+  color: #fff;
+}
+
+.listing-progress-step.completed .listing-step-label {
+  color: #2ecc71;
+}
+
+.listing-step-line {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #253653;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.listing-step-line.filled {
+  background: #2ecc71;
+}
+
+/* ── Step content ── */
+.listing-step-content {
+  animation: fadeSlide 0.25s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Bottom nav buttons ── */
+.listing-step-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #253653;
+}
+
+.listing-step-nav button:disabled,
+.listing-action-bar button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Error states ── */
+.listing-form-input.input-error,
+.listing-form-select.input-error {
+  box-shadow: 0 0 0 2px #3bf5ff;
+}
+
+.listing-step-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(231, 76, 60, 0.12);
+  color: #3bf5ff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 15px;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* ── Step 4 status messages ── */
+.listing-image-confirm,
+.listing-image-pending {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-top: 15px;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.listing-image-confirm {
+  background: rgba(46, 204, 113, 0.12);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.listing-image-pending {
+  background: rgba(210, 79, 26, 0.12);
+  color: #3bf5ff;
+  border: 1px solid rgba(210, 79, 26, 0.3);
+}
+
+/* ── Highlight the uploader when step 4 is active ── */
+.listing-card-upload-card.highlight {
+  /* box-shadow: 0 0 0 2px #d24f1a; */
+  transition: box-shadow 0.25s ease;
+}
+
+/* ── Checkmark pop animation ── */
+@keyframes popIn {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.listing-progress-step.completed .listing-step-circle svg {
+  animation: popIn 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════
+   Progress Bar / Stepper
+   ═══════════════════════════════════════════ */
+.listing-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.listing-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.listing-progress-step.clickable {
+  cursor: pointer;
+}
+
+/* The numbered circle */
+.listing-step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #253653;
+  color: #8899aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid #253653;
+  transition: all 0.25s ease;
+  z-index: 2;
+  position: relative;
+}
+
+/* Active step (current) */
+.listing-progress-step.active .listing-step-circle {
+  background: #3bf5ff;
+  color: #fff;
+  border-color: #3bf5ff;
+  box-shadow: 0 0 0 4px rgba(59, 245, 255, 0.25);
+  transform: scale(1.08);
+}
+
+/* Completed step (green + clickable) */
+.listing-progress-step.completed .listing-step-circle {
+  background: #2ecc71;
+  color: #fff;
+  border-color: #2ecc71;
+}
+
+.listing-progress-step.completed:hover .listing-step-circle {
+  background: #27ae60;
+  transform: scale(1.08);
+}
+
+/* Label under the circle */
+.listing-step-label {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #8899aa;
+  text-align: center;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.listing-progress-step.active .listing-step-label {
+  color: #fff;
+}
+
+.listing-progress-step.completed .listing-step-label {
+  color: #2ecc71;
+}
+
+/* The connecting line */
+.listing-step-line {
+  position: absolute;
+  top: 18px;              /* half the circle height */
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #253653;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.listing-step-line.filled {
+  background: #2ecc71;
+}
+
+/* ── Step content transition ── */
+.listing-step-content {
+  animation: fadeSlide 0.25s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Bottom nav buttons ── */
+.listing-step-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #253653;
+}
+
+.listing-step-nav button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

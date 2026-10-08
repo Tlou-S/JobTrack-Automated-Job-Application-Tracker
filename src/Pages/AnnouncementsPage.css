@@ -1,0 +1,11 @@
+.announcements-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 980px; }
+.announcement-card { min-height: 205px; }
+.announcement-card p { margin-bottom: 18px; }
+.announcement-priority { padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 800; }
+.announcement-priority-important { background: #fff0f0; color: #d44747; }
+.announcement-priority-update { background: #eaf5ff; color: #2772aa; }
+.announcement-priority-event { background: #fff5df; color: #b97909; }
+.announcement-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; color: #8b9aad; font-size: 12px; }
+.announcement-card-footer button { border: 0; background: none; color: #0d9488; font-size: 12px; font-weight: 700; }
+.announcement-card-footer button:hover { text-decoration: underline; }
+@media (max-width: 700px) { .announcements-list { grid-template-columns: 1fr; } .announcements-sort { align-self: flex-start; } }

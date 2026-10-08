@@ -1,0 +1,549 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 8px 32px;
+  box-sizing: border-box;
+
+  background: #1e3a5f;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.navbar-logo-image {
+  width: 145px;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar-brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: #2bb8c4;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.navbar-brand-name {
+  margin-left: 9px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.navbar-search {
+  flex: 1;
+  max-width: 470px;
+  height: 38px;
+
+  display: flex;
+  align-items: stretch;
+
+  margin-left: 10px;
+}
+
+.navbar-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 0 15px;
+
+  border: none;
+  outline: none;
+
+  background: #ffffff;
+
+  border-radius: 6px 0 0 6px;
+
+  color: #1e3a5f;
+  font-size: 13px;
+}
+
+.navbar-search input::placeholder {
+  color: #64748b;
+}
+
+.navbar-search button {
+  width: 48px;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2bb8c4;
+  color: #ffffff;
+
+  border-radius: 0 6px 6px 0;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-search button:hover {
+  background: #20a8b3;
+}
+
+.navbar-search button:active {
+  transform: scale(0.96);
+}
+
+/* =========================================================
+   TOP NAV ACTIONS
+========================================================= */
+
+.navbar-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 26px;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.nav-action {
+  position: relative;
+  min-width: 48px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-action:hover {
+  color: #2dd4bf;
+  transform: translateY(-1px);
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+
+  font-size: 18px;
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.nav-profile-wrapper {
+  position: relative;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-left: 4px;
+
+  color: #ffffff;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.nav-profile:hover .profile-name {
+  color: #2dd4bf;
+}
+
+/* Real Sipho image */
+
+.profile-avatar-image {
+  width: 32;
+  height: 32px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid #ffffff;
+
+  background: #ffffff;
+
+  display: block;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: wheat;
+
+  white-space: nowrap;
+}
+
+.profile-chevron {
+  width: 10px;
+  height: 10px;
+
+  color: #ffffff;
+
+  transition: transform 0.2s ease;
+}
+
+.profile-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   PROFILE DROPDOWN MENU
+========================================================= */
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+
+  min-width: 190px;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+
+  z-index: 100;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-dropdown-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 11px 16px;
+
+  border: none;
+  background: none;
+
+  color: #1e3a5f;
+
+  text-decoration: none;
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.15s ease;
+}
+
+.profile-dropdown-item:hover {
+  background: #f1f5f9;
+  color: #14b8a6;
+}
+
+.profile-dropdown-item.logout {
+  color: #c0392b;
+  border-top: 1px solid #e5e9ee;
+}
+
+.profile-dropdown-item.logout:hover {
+  background: #fdecea;
+  color: #c0392b;
+}
+
+.dropdown-icon {
+  width: 14px;
+  height: 14px;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   SECOND NAVIGATION
+========================================================= */
+
+.nav-links-row {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 34px;
+
+  padding: 0 32px;
+
+  height: 44px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #dbe2e8;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   SECOND NAV LINKS
+========================================================= */
+
+.nav-links-row a {
+  position: relative;
+
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 2px;
+
+  box-sizing: border-box;
+
+  color: #1e3a5f;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease;
+}
+
+.nav-links-row a:hover {
+  color: #14b8a6;
+}
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.nav-links-row a.active {
+  color: #14b8a6;
+  font-weight: 700;
+}
+
+.nav-links-row > a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #14b8a6;
+}
+
+.nav-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.nav-dropdown-trigger {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 2px;
+  border: 0;
+  background: transparent;
+  color: #1e3a5f;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger.active {
+  color: #14b8a6;
+}
+
+.nav-dropdown-trigger.active {
+  font-weight: 700;
+}
+
+.nav-dropdown-chevron {
+  width: 10px;
+  height: 10px;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  padding: 6px 0;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  z-index: 100;
+}
+
+.nav-links-row .nav-dropdown-item {
+  height: auto;
+  display: block;
+  padding: 10px 16px;
+  color: #1e3a5f;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nav-links-row .nav-dropdown-item:hover,
+.nav-links-row .nav-dropdown-item.active {
+  background: #f1f5f9;
+  color: #14b8a6;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    gap: 16px;
+    padding: 8px 20px;
+  }
+
+  .navbar-logo-image {
+    width: 125px;
+  }
+
+  .navbar-search {
+    max-width: 360px;
+  }
+
+  .navbar-actions {
+    gap: 16px;
+  }
+
+  .nav-links-row {
+    gap: 22px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .profile-name,
+  .profile-chevron {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 14px;
+  }
+
+  .navbar-search {
+    max-width: 300px;
+  }
+
+  .nav-links-row {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+
+.cart-count {
+  position: absolute;
+  top: -7px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background: #2db7c3;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 18px;
+  text-align: center;
+}
+
+/* Letter avatar shown when the user has no profile photo */
+.profile-avatar-fallback {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+
+  background: #16b3a5;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+}

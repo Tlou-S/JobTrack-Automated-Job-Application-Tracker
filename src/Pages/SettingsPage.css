@@ -1,0 +1,1101 @@
+/* =========================================================
+  JOBTRACK SETTINGS PAGE
+   ========================================================= */
+
+.settings-page {
+  --settings-navy: #1e3a5f;
+  --settings-dark-navy: #142c49;
+
+  --settings-teal: #16b3a5;
+  --settings-dark-teal: #0e988d;
+
+  --settings-gold: #f5a623;
+
+  --settings-white: #ffffff;
+  --settings-light-grey: #f3f3f3;
+  --settings-border: #dddddd;
+
+  --settings-text: #151515;
+  --settings-muted: #777777;
+
+  --settings-danger: #df1010;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--settings-white);
+
+  color: var(--settings-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+.settings-page *,
+.settings-page *::before,
+.settings-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE CONTENT
+   ========================================================= */
+
+.settings-page-content {
+  margin-left: 166px;
+
+  width: calc(100% - 166px);
+
+  min-height: 100vh;
+
+  background: var(--settings-white);
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.settings-main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.settings-topbar {
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 27px;
+
+  background: var(--settings-white);
+
+  border-bottom: 1px solid #dddddd;
+}
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.settings-back-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 5px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--settings-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.settings-back-button svg {
+  font-size: 15px;
+}
+
+.settings-back-button:hover {
+  color: var(--settings-navy);
+}
+
+/* =========================================================
+   TOP RIGHT ACTIONS
+   ========================================================= */
+
+.settings-top-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* =========================================================
+   TOP ICONS
+   Matches Profile page:
+   plain navy icons on white background
+   ========================================================= */
+
+.settings-top-icon {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: var(--settings-navy);
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.settings-top-icon:hover {
+  background: #f3f3f3;
+}
+
+.settings-top-icon-active {
+  background: transparent;
+
+  color: var(--settings-navy);
+}
+
+.settings-top-icon-active:hover {
+  background: #f3f3f3;
+}
+
+/* =========================================================
+   NOTIFICATION DOT
+   ========================================================= */
+
+.settings-notification-dot {
+  position: absolute;
+
+  top: 6px;
+  right: 6px;
+
+  width: 7px;
+  height: 7px;
+
+  background: var(--settings-teal);
+
+  border: 1px solid var(--settings-white);
+
+  border-radius: 50%;
+}
+
+/* =========================================================
+   PROFILE AVATAR
+   ========================================================= */
+
+.settings-avatar {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 2px solid var(--settings-navy);
+
+  border-radius: 50%;
+
+  background: var(--settings-navy);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-avatar:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 2px 8px rgba(20, 44, 73, 0.2);
+}
+
+/* ACTUAL SIPHO IMAGE */
+
+.settings-avatar-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+/* FALLBACK ONLY IF IMAGE CANNOT LOAD */
+
+.settings-avatar-fallback {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--settings-navy);
+
+  color: var(--settings-white);
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   SETTINGS CONTENT
+   ========================================================= */
+
+.settings-content {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 28px 27px 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+/* =========================================================
+   SETTINGS CARD
+   ========================================================= */
+
+.settings-card {
+  width: 100%;
+
+  padding: 20px;
+
+  background: var(--settings-light-grey);
+
+  border: 1px solid #e0e0e0;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.settings-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 17px;
+}
+
+.settings-card-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: var(--settings-white);
+
+  color: var(--settings-teal);
+
+  font-size: 15px;
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.settings-card-header h2 {
+  margin: 0 0 3px;
+
+  color: var(--settings-navy);
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.settings-card-header p {
+  margin: 0;
+
+  color: var(--settings-muted);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   STANDARD ROW
+   ========================================================= */
+
+.settings-row {
+  min-height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 13px 3px;
+
+  border-top: 1px solid #d9d9d9;
+}
+
+.settings-row-content {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.settings-row-content strong {
+  color: var(--settings-text);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.settings-row-content span {
+  color: var(--settings-muted);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   MANAGE BUTTON
+   ========================================================= */
+
+.settings-manage-button {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 7px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--settings-dark-teal);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.settings-manage-button:hover {
+  color: var(--settings-navy);
+}
+
+.settings-manage-button svg {
+  font-size: 9px;
+}
+
+/* =========================================================
+   TOGGLE
+   ========================================================= */
+
+.settings-toggle {
+  width: 43px;
+  height: 24px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 2px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: #c9c9c9;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease;
+}
+
+.settings-toggle-knob {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: var(--settings-white);
+
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.2);
+
+  transform: translateX(0);
+
+  transition:
+    transform 0.2s ease;
+}
+
+.settings-toggle-on {
+  background: var(--settings-teal);
+}
+
+.settings-toggle-on .settings-toggle-knob {
+  transform: translateX(19px);
+}
+
+/* =========================================================
+   LANGUAGE SELECT
+   ========================================================= */
+
+.settings-language-select {
+  min-width: 145px;
+
+  flex-shrink: 0;
+
+  padding: 9px 32px 9px 11px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 6px;
+
+  background: var(--settings-white);
+
+  color: #333333;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.settings-language-select:focus {
+  border-color: var(--settings-teal);
+
+  box-shadow:
+    0 0 0 2px rgba(22, 179, 165, 0.12);
+}
+
+/* =========================================================
+   CLICKABLE PRIVACY ROW
+   ========================================================= */
+
+.settings-clickable-row {
+  width: 100%;
+
+  min-height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 12px 3px;
+
+  border: none;
+
+  border-top: 1px solid #d9d9d9;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.settings-clickable-row .settings-row-content {
+  flex: 1;
+}
+
+.settings-clickable-row > svg {
+  flex-shrink: 0;
+
+  color: var(--settings-muted);
+
+  font-size: 11px;
+}
+
+.settings-clickable-row:hover
+  .settings-row-content
+  strong {
+  color: var(--settings-dark-teal);
+}
+
+.settings-clickable-row:hover > svg {
+  color: var(--settings-teal);
+}
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.settings-save-button {
+  width: 100%;
+
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: var(--settings-teal);
+
+  color: var(--settings-white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-save-button:hover {
+  background: var(--settings-dark-teal);
+
+  box-shadow:
+    0 5px 12px rgba(22, 179, 165, 0.2);
+}
+
+.settings-save-button:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   ACCOUNT ACTIONS
+   ========================================================= */
+
+.settings-danger-card {
+  width: 100%;
+
+  padding: 20px;
+
+  background: #fff5f5;
+
+  border: 1px solid #f1cccc;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.settings-danger-header {
+  margin-bottom: 15px;
+}
+
+.settings-danger-header h2 {
+  margin: 0 0 4px;
+
+  color: var(--settings-danger);
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.settings-danger-header p {
+  margin: 0;
+
+  color: var(--settings-muted);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   ACCOUNT ACTION BUTTONS
+   ========================================================= */
+
+.settings-danger-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.settings-logout-button,
+.settings-delete-button {
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border-radius: 6px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* LOG OUT */
+
+.settings-logout-button {
+  border: 1px solid var(--settings-navy);
+
+  background: var(--settings-white);
+
+  color: var(--settings-navy);
+}
+
+.settings-logout-button:hover {
+  background: var(--settings-navy);
+
+  color: var(--settings-white);
+}
+
+/* DELETE */
+
+.settings-delete-button {
+  border: 1px solid var(--settings-danger);
+
+  background: var(--settings-danger);
+
+  color: var(--settings-white);
+}
+
+.settings-delete-button:hover {
+  background: #b90000;
+
+  border-color: #b90000;
+}
+
+/* =========================================================
+   DARK MODE
+   Only affects the Settings page.
+   ========================================================= */
+
+.settings-dark-mode {
+  background: #142c49;
+
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-page-content,
+.settings-dark-mode .settings-main,
+.settings-dark-mode .settings-topbar {
+  background: #142c49;
+}
+
+.settings-dark-mode .settings-topbar {
+  border-bottom-color: #31516f;
+}
+
+.settings-dark-mode .settings-back-button {
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-top-icon {
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-top-icon:hover {
+  background: #1e3a5f;
+}
+
+.settings-dark-mode .settings-card {
+  background: #1e3a5f;
+
+  border-color: #31516f;
+}
+
+.settings-dark-mode .settings-card-header h2 {
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-card-header p {
+  color: #d0d8e0;
+}
+
+.settings-dark-mode .settings-row {
+  border-top-color: #31516f;
+}
+
+.settings-dark-mode .settings-row-content strong {
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-row-content span {
+  color: #c4ced8;
+}
+
+.settings-dark-mode .settings-clickable-row {
+  border-top-color: #31516f;
+}
+
+.settings-dark-mode .settings-clickable-row
+  .settings-row-content
+  strong {
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-language-select {
+  background: #142c49;
+
+  border-color: #52708c;
+
+  color: #ffffff;
+}
+
+.settings-dark-mode .settings-card-icon {
+  background: #142c49;
+}
+
+.settings-dark-mode .settings-danger-card {
+  background: #3b1f24;
+
+  border-color: #70343b;
+}
+
+.settings-dark-mode .settings-danger-header p {
+  color: #d0c5c7;
+}
+
+.settings-dark-mode .settings-logout-button {
+  background: #142c49;
+
+  color: #ffffff;
+
+  border-color: #ffffff;
+}
+
+/* =========================================================
+   1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .settings-content {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .settings-topbar {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+}
+
+/* =========================================================
+   850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .settings-content {
+    padding-top: 22px;
+
+    gap: 15px;
+  }
+
+  .settings-card {
+    padding: 17px;
+  }
+
+  .settings-row {
+    gap: 15px;
+  }
+}
+
+/* =========================================================
+   700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .settings-page-content {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .settings-topbar {
+    height: 58px;
+
+    padding: 0 15px;
+  }
+
+  .settings-back-button {
+    font-size: 14px;
+  }
+
+  .settings-top-actions {
+    gap: 4px;
+  }
+
+  .settings-top-icon {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+  .settings-avatar {
+    width: 36px;
+
+    height: 36px;
+  }
+
+  .settings-notification-dot {
+    top: 4px;
+
+    right: 4px;
+  }
+
+  .settings-content {
+    padding: 18px 15px 30px;
+  }
+
+  .settings-card {
+    padding: 16px;
+  }
+
+  .settings-card-header {
+    gap: 10px;
+  }
+
+  .settings-card-icon {
+    width: 35px;
+
+    height: 35px;
+
+    font-size: 14px;
+  }
+
+  .settings-card-header h2 {
+    font-size: 17px;
+  }
+
+  .settings-card-header p {
+    font-size: 10px;
+  }
+
+  .settings-row {
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 13px 0;
+  }
+
+  .settings-row-content {
+    flex: 1;
+  }
+
+  .settings-row-content strong {
+    font-size: 12px;
+  }
+
+  .settings-row-content span {
+    font-size: 10px;
+  }
+
+  .settings-language-select {
+    min-width: 120px;
+
+    font-size: 11px;
+  }
+
+  .settings-manage-button {
+    font-size: 11px;
+  }
+
+  .settings-danger-actions {
+    flex-direction: column;
+  }
+
+  .settings-logout-button,
+  .settings-delete-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+  .settings-topbar {
+    padding: 0 10px;
+  }
+
+  .settings-top-actions {
+    gap: 2px;
+  }
+
+  .settings-back-button {
+    gap: 6px;
+
+    font-size: 13px;
+  }
+
+  .settings-top-icon {
+    width: 31px;
+
+    height: 31px;
+
+    font-size: 15px;
+  }
+
+  .settings-avatar {
+    width: 34px;
+
+    height: 34px;
+  }
+
+  .settings-content {
+    padding-left: 10px;
+
+    padding-right: 10px;
+  }
+
+  .settings-card {
+    padding: 14px;
+  }
+
+  .settings-row {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .settings-row > .settings-toggle {
+    align-self: flex-end;
+  }
+
+  .settings-language-select {
+    width: 100%;
+  }
+
+  .settings-manage-button {
+    align-self: flex-end;
+  }
+
+  .settings-clickable-row {
+    align-items: center;
+  }
+
+  .settings-save-button {
+    height: 44px;
+  }
+
+  .settings-danger-card {
+    padding: 15px;
+  }
+}

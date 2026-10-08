@@ -1,0 +1,255 @@
+.checkout-page{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a1a1a;
+}
+
+.secure-label{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color:#888;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.checkout-page h2{
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.checkout-steps{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.checkout-step{
+    display: flex;
+    align-items: center;
+}
+
+.step-circle{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.step-circle.active{
+    background-color: #111;
+    color: #fff;
+}
+
+.step-label{
+    margin-left: 0 12px;;
+    font-size: 14px;
+    color: #999;
+}
+
+.step-label.active{
+    color: #111;
+    font-weight: 600;
+}
+
+.step-line{
+    width: 60px;
+    height: 1px;
+    background-color: #ddd;
+    margin-right: 12px;
+}
+
+.checkout-content{
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.details-form{
+    flex: 2;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.section-label{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color:#999;
+    margin-bottom: 16px;
+}
+
+.details-form input{
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.details-form input:focus{
+    outline: none;
+    border-color: #14b8a6;
+}
+
+.form-row{
+    display: flex;
+    gap: 16px;
+}
+
+.form-row > div{
+    flex: 1;
+}
+
+.field-error{
+    color: #dc2626;
+    font-size: 12px;
+    margin: -10px 0 16px 0;
+}
+
+.fulfillment-options{
+    display: grid;
+    /* minmax(0, 1fr): a bare 1fr won't let the track shrink below its content's natural width */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px){
+    .fulfillment-options{
+        grid-template-columns: 1fr;
+    }
+}
+
+.fulfillment-option{
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.fulfillment-option:hover{
+    border-color: #14b8a6;
+}
+
+.fulfillment-option.selected{
+    border-color: #14b8a6;
+    background: #f0fdfa;
+}
+
+.fulfillment-option input[type="radio"]{
+    /* overrides .details-form input's width: 100%, which also matches these */
+    width: auto;
+    margin-top: 3px;
+    margin-bottom: 0;
+    accent-color: #14b8a6;
+    flex-shrink: 0;
+}
+
+.fulfillment-option span{
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.fulfillment-option strong{
+    display: block;
+    font-size: 14px;
+    color: #111;
+}
+
+.fulfillment-option small{
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+}
+
+.order-summary{
+    flex: 1;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 260px;
+}
+
+.order-summary hr{
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+}
+
+.order-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.order-item img{
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #f5f5f5;
+}
+
+.order-item-name{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.order-item-specs{
+    font-size: 11px;
+    color: #999;
+    margin: 2px 0 0 0;
+}
+
+.order-item-price{
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.summary-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    color: #555;
+}
+
+.summary-row.total{
+    font-weight: bold;
+    font-size: 15px;
+    color: #111;
+}
+
+.continue-btn{
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 32px;
+    background: #14b8a6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.continue-btn:hover{
+    background: #0d9488;
+}

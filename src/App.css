@@ -1,0 +1,191 @@
+/* =========================================================
+  JobTrack Global Styles
+   ========================================================= */
+
+:root {
+  --primary-blue: #1e3a5f;
+  --primary-blue-dark: #162f4d;
+
+  --turquoise: #2db7c3;
+  --turquoise-dark: #20a5b1;
+
+  --page-bg: #f4f6f8;
+  --white: #ffffff;
+
+  --text: #173b63;
+  --text-dark: #0f3154;
+  --text-light: #64748b;
+
+  --border: #dce3ea;
+  --border-light: #e8edf2;
+
+  --success: #35b987;
+  --warning: #f4b400;
+
+  --font:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-family: var(--font);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text);
+  background: var(--page-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: var(--font);
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   Removes the Vite starter 1126px restriction
+   ========================================================= */
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   PAGE WRAPPER
+   ========================================================= */
+
+.page {
+  width: 100%;
+  min-height: calc(100vh - 145px);
+  background: var(--page-bg);
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(1150px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: var(--font);
+  color: var(--text);
+}
+
+p {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef1f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8c2cc;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f9ba8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 32px, 1150px);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+}

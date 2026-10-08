@@ -1,0 +1,381 @@
+
+/* Every class here is prefixed "co-" so it can't clash with the
+   Details, Payment or Cart stylesheets. */
+
+.co-page {
+  --navy: #0f2a4a;
+  --navy-dark: #0a1f38;
+  --teal: #14b8a6;
+  --teal-dark: #0f9488;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --error: #dc2626;
+  --bg: #eef1f4;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: inherit;
+  color: var(--text-dark);
+  text-align: left;
+}
+
+.co-page *,
+.co-page *::before,
+.co-page *::after {
+  box-sizing: border-box;
+}
+
+.co-main {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 24px 64px;
+}
+
+.co-title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy-dark);
+}
+
+/* ===== Steps ===== */
+
+.co-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.co-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 96px;
+}
+
+.co-step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid #d1d5db;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.co-step-active .co-step-circle {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+
+.co-step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.co-step-active .co-step-label {
+  color: var(--navy-dark);
+}
+
+.co-step-connector {
+  flex: 1;
+  max-width: 120px;
+  height: 2px;
+  margin-top: 18px;
+  background: #d1d5db;
+}
+
+/* ===== Columns ===== */
+
+.co-columns {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.co-left {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.co-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.co-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 22px 24px;
+}
+
+.co-heading {
+  margin: 0 0 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ===== Form ===== */
+
+.co-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.co-field:last-child {
+  margin-bottom: 0;
+}
+
+.co-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.co-field input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.co-field input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+.co-field .co-input-error {
+  border-color: var(--error);
+}
+
+.co-error {
+  font-size: 12px;
+  color: var(--error);
+}
+
+/* ===== Payment options ===== */
+
+.co-payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.co-payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.co-payment-option:hover {
+  border-color: var(--teal);
+}
+
+.co-payment-option.co-selected {
+  border-color: var(--teal);
+  background: rgba(20, 184, 166, 0.06);
+}
+
+.co-payment-option input[type="radio"] {
+  accent-color: var(--teal);
+}
+
+.co-swatch {
+  width: 28px;
+  height: 18px;
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+/* ===== Continue button ===== */
+
+.co-form-message {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #fdecec;
+  color: var(--error);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.co-continue {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  background: var(--teal);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.co-continue:hover {
+  background: var(--teal-dark);
+}
+
+/* ===== Order summary ===== */
+
+.co-sum-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.co-sum-thumb {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  background: #d9d9d9;
+  border-radius: 4px;
+}
+
+.co-sum-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.co-sum-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.co-sum-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.co-sum-qty {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.co-sum-price {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.co-empty {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.co-divider {
+  height: 1px;
+  margin: 14px 0;
+  background: var(--border);
+}
+
+.co-sum-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.co-sum-row.co-total {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.co-secure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.co-lock {
+  font-size: 18px;
+}
+
+.co-secure-title {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.co-secure-sub {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 900px) {
+  .co-columns {
+    flex-direction: column;
+  }
+
+  .co-left,
+  .co-right {
+    width: 100%;
+    flex: none;
+  }
+
+  .co-step-connector {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .co-main {
+    padding: 18px 14px 40px;
+  }
+
+  .co-card {
+    padding: 18px 16px;
+  }
+}
+

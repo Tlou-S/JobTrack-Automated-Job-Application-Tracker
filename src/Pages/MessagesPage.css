@@ -1,0 +1,273 @@
+.msg-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+}
+
+.msg-layout {
+  display: flex;
+  height: calc(100vh - 108px);
+  border-top: 1px solid #eee;
+}
+
+/* Sidebar */
+.msg-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.msg-sidebar-header {
+  padding: 20px 20px 12px 20px;
+}
+
+.msg-sidebar-header h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.msg-conversation-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-conversation-item {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 20px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.msg-conversation-item:hover {
+  background: #fafafa;
+}
+
+.msg-conversation-item.msg-active {
+  background: #f0fdfa;
+}
+
+.msg-conv-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.msg-conv-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.msg-conv-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.msg-conv-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+
+.msg-conv-time {
+  font-size: 11px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.msg-conv-listing {
+  font-size: 11px;
+  color: #14b8a6;
+  font-weight: 600;
+}
+
+.msg-conv-preview {
+  font-size: 12px;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg-conv-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #14b8a6;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Thread */
+.msg-thread {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.msg-thread-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.msg-thread-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.msg-thread-header div {
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-thread-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.msg-thread-listing {
+  font-size: 12px;
+  color: #888;
+}
+
+.msg-thread-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fbfbfb;
+}
+
+.msg-bubble-row {
+  display: flex;
+}
+
+.msg-row-me {
+  justify-content: flex-end;
+}
+
+.msg-row-them {
+  justify-content: flex-start;
+}
+
+.msg-bubble {
+  max-width: 60%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.msg-bubble p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.msg-bubble-time {
+  font-size: 10px;
+  opacity: 0.7;
+  align-self: flex-end;
+}
+
+.msg-bubble-me {
+  background: #14b8a6;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.msg-bubble-them {
+  background: #eef1f4;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+}
+
+/* Input bar */
+.msg-input-bar {
+  display: flex;
+  gap: 10px;
+  padding: 14px 24px;
+  border-top: 1px solid #eee;
+}
+
+.msg-input-bar input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 13px;
+  outline: none;
+}
+
+.msg-input-bar input:focus {
+  border-color: #14b8a6;
+}
+
+.msg-send-btn {
+  background: #14b8a6;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.msg-send-btn:hover {
+  background: #0d9488;
+}
+
+/* Empty state */
+.msg-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .msg-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .msg-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    max-height: 300px;
+  }
+
+  .msg-thread-body {
+    max-height: 400px;
+  }
+}

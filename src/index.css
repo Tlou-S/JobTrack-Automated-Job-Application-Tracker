@@ -1,0 +1,115 @@
+/* =========================================
+  GLOBAL STYLES - JOBTRACK
+========================================= */
+
+:root {
+  --text: #405064;
+  --text-h: #0d2b45;
+  --bg: #f5f7fb;
+  --border: #e5e9ee;
+
+  --accent: #20b8c1;
+  --accent-bg: rgba(32, 184, 193, 0.1);
+
+  --sans: Arial, "Segoe UI", Roboto, sans-serif;
+  --heading: Arial, "Segoe UI", Roboto, sans-serif;
+
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  background: #f5f7fb;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  background: #f5f7fb;
+
+  overflow-x: hidden;
+}
+
+/* =========================================
+   REACT ROOT
+========================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+
+  background: #f5f7fb;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
